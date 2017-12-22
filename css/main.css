@@ -1,0 +1,233 @@
+html{
+  box-sizing: border-box;
+}
+
+*,*:after,*:before{
+  padding: 0;
+  margin: 0;
+  box-sizing:inherit;
+}
+
+.clearfix{
+  clear: both;
+  content: "";
+  display: block;
+}
+
+body{
+  background-color: #FFC300;
+}
+
+.contenedor{
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+
+  background-color: #ffffff;
+  margin-top: 20px;
+
+}
+
+h2{
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.3em;
+  font-family: 'Signika', sans-serif;
+}
+h3{
+
+  font-family: 'Piedra', cursive;
+  text-align: center;
+}
+
+div.table-info{
+  margin-bottom: 20px;
+}
+
+div.contenido,
+div.table-info{
+  width: 60%;
+  margin: 20px auto;
+  display: block;
+  background-color: #e1e1e1;
+  padding: 20px;
+}
+
+
+div.buscar{
+  margin-top: 50px;
+}
+
+div.buscar i{
+
+  padding: 6px;
+  background-color: #0E446E;
+}
+div.buscar input{
+  width: 50%;
+  padding: 6px;
+  background-image: url(../img/buscar.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: right;
+  box-shadow: 1px 2px 1px 3px #e1e1e1;
+}
+
+div.contenido div.campo{
+  padding: 10px;
+}
+
+div.contenido div.campo input{
+  width: 80%;
+  padding: 5px;
+
+}
+
+div.contenido .button{
+  margin-top: 20px;
+  padding: 5px 20px;
+  background-color: #FFC300;
+  border: 1px solid #FFC300;
+  cursor: pointer;
+
+}
+
+div.table-info > p{
+  margin: 20px 0px;;
+  padding:20px;
+  text-transform: uppercase;
+  background-color: #0E446E;
+  color: #ffffff;
+}
+
+div.table-info p span#total{
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+div.table-info table {
+  background-color: #FFC300;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+}
+div.table-info table thead th{
+  padding: 10px;
+  background-color: #fe4918;
+  border: none;
+}
+
+div.table-info table tr td{
+
+  border: 1px solid #e1e1e1;
+  text-align: center;
+  padding: 10px;
+}
+
+div.table-info table tr td a i{
+  background-color: transparente;
+  color: #0E446E;
+  padding: 5px;
+  font-size: 1.3em;
+}
+
+
+div.table-info table tr td a i:hover{
+  color: #DE5347;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5)
+
+}
+
+#mensaje{
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 1em;
+  border: 1px dashed #FFFFFF;
+  background-color: #245176;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+#borrado{
+  background-color: #DE5145;
+  padding: 10px;
+  text-align: center;
+
+}
+
+/*CODIGO DE ANIMACIÓN*/
+/*Keframes: especifica el codigo de animación*/
+@keyframes mostrar {
+  0% {opacity: 0;}    /*Los selectores de 0% y 100% se utilizan para obtener mejor compatibilidad con los navegadores*/
+  100% {opacity: 1;}
+}
+
+@keyframes ocultar {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+
+.mostra{
+  animation: mostrar .5s ease-in-out 1 forwards; /*se coloca el keyframes tiempo tipo-animacion  repeticion orden de la animacion  */
+}
+
+.ocultar{
+  animation: ocultar .5s ease-in-out  1 forwards;
+}
+
+button.borrar{
+  background-color: transparent;
+  border: none;
+  background-image: url(../img/borrar.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  text-indent: -9999px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+
+input.borrar_contacto{
+  background-color: transparent;
+  border: none;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+.activo{
+  background-color: #DE5145;
+}
+
+/*tr del formulario*/
+tbody tr td a{
+  ba
+}
+
+/*Estilos para editar */
+.modo_edicion p,
+.modo_edicion .editarBtn,
+tbody tr input[type="text"],
+div.Existentes table tr a.guardarBtn{
+  display: none;
+}
+
+
+.modo_edicion input[type="text"],
+div.Existentes table tr.modo_edicion  a.guardarBtn
+{
+  display:block;
+}
+
+.desactivado{
+  pointer-events: none;
+  cursor: default;
+  opacity: .5;
+}
